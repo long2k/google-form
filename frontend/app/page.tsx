@@ -15,5 +15,5 @@ export default function Home() {
   useEffect(() => {
     getSession().catch(console.error);
   }, []);
-  return <>{session ? <HomePage /> : <Login />}</>;
+  return <>{!session ? <HomePage /> : <Login />}</>;
 }
