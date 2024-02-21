@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import TopCard from "./base/TopCard";
 import QuestionCard from "@/components/base/QuestionCard"
+import { useSession } from "next-auth/react";
 
 export interface FormDataInterface {
   question: string;
@@ -9,9 +10,7 @@ export interface FormDataInterface {
 
 const HomePage = () => {
   const [data, setData ] = useState<FormDataInterface[]>([]);
-  const handleChangeTitle = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const { value } = event.target;
-  };
+  const { data: session } = useSession()
   return (
     <main className="w-full h-full">
       <section className="w-full py-[50px] h-full bg-violet-100 flex justify-center">

@@ -8,17 +8,14 @@ export const options: NextAuthOptions = {
     },
     providers: [
         GoogleProvider({
-            clientId: process.env.GOOGLE_CLIENT_ID as string,
-            clientSecret: process.env.GOOGE_CLIENT_SECRET as string,
+            clientId: "49358807462-2n18923nemme0pbupg75o50agvq9ajqd.apps.googleusercontent.com",
+            clientSecret: "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",
         })
     ],
     callbacks: {
-        async  signIn({account, profile}) {
-            if (!profile?.email) {
-                throw new Error('No profile')
-            }
-            console.log("profile")
-            return true
+        async signIn({user, account}) {
+          
+            return user
         }
     }
 }
