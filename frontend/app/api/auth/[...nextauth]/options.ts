@@ -13,8 +13,8 @@ export const options: NextAuthOptions = {
         })
     ],
     callbacks: {
-        async signIn({user, account}) {
-          
+        async signIn({user, account}: any) {
+            
             return user
         }
     }

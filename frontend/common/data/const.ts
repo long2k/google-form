@@ -16,7 +16,7 @@ export const FormData = [
         answer: ["Pop music", "Country music", "Popular music", "Jazz"]
     },
     {
-        question: "Which subject do you like best when you study at school ? ",
+        question: "Which subject do you like best when you study at school ?",
         answer: ["English", "Music", "Science", "Information technology"]
     }
 ]

@@ -1,8 +1,11 @@
 import { useSession } from "next-auth/react";
-import Link from "next/link";
+import { signIn, signOut } from "next-auth/react"
 
 const TopCard = () => {
   const { data: session } = useSession()
+  const handleChangeAccount = () => {
+    signOut()
+  }
   return (
     <div className="w-full h-fit bg-white border overflow-hidden rounded-[10px] ">
       <div className="h-[10px] bg-violet-800"></div>
@@ -17,9 +20,9 @@ const TopCard = () => {
               <p className="text-sm font-bold text-slate-600">
               {session?.user?.email}
               </p>
-              <Link href={"#"} className="text-sm font-light text-sky-600">
-                Chuyển đổi tài khoản
-              </Link>
+              <div onClick={handleChangeAccount} className="text-sm font-light text-sky-600 cursor-pointer">
+                Change Account
+              </div>
             </div>
             <div>
               <p className="text-xs">Đã lưu bản nháp</p>

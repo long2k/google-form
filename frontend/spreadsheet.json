@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "red-planet-415014",
+  "private_key_id": "2f29b96b3a7a6c2abfecfff43b7a45dc5e3bf773",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDNVM3XcTPSu+ns\nkOPemeuM3WI2aHUwOhVGNzobpa+XQuW0FO5SFrIT1LfTXPlbb9sjLq0JzlOpEr9A\nzBDokHdbIRi6JXVvc/+3xdpwIwb35gLnvmi4eyHPUUylgMjaATt37V8FjYyVNmMu\nwLM0eKkXmw+hx6bqCDB+Gtxn7AtPzCYouSR2bXhaXsJrDX8WZK290zJ10phgeFRt\nzaFIrCQI+JaX4yb2vBiw86XuohzYAGwqi/EfnsIdvnyySkZnnu2GEONl/ikOQgRb\n6Kiyz+c8nAAhDAe7/yNrT8A9lVoCROrMcLT4YfxrCXWhVeUGASxNQfidYkisj3SC\neNZm77ORAgMBAAECggEACYtvUtwoU/vAF8sDq6qhIWP+W2/7QBPYHrKlIuk+loAB\npl+JdUOIsT0scyDdlsV2JN5X5PZ8SzYD0czWnZ/vC2t4Pzlr6kOUs8/Iu9kV+yas\nFIaUbrxrDbx+TQx1sbQYVgagydTaz8oWndMPdYFFH3O53BvoN3VsXyVLoPFPFI1A\nGJXr0ieg7kI7KILnO9XQXM5vG/9TRLG1xAxBozWIgoeCTFLzBho0vFoO3fgDkUmS\nTtVuYMPfw1wt5CJvA//yVG1nvuvgQJdQVsToyoTQ4JAqS8wBLVJV6kG7RNqrRpEJ\nixdif9jIZIJ1xOQnov2GYLS9AuD/7MLDRGFxHIhC4QKBgQDpRNVQ9kuqzm+az95b\n3cw4GSQ68b8Bl4/HYa1oxWvmn65qZI6xP46shHFihPqOHt75MLAqt5nX/XTG3XN5\nB0bSp0GgH5+7t9vE0g/LuD9DEQLy81XLSz+h5t3q86MIK82iq94BVCMEm6Uyeogc\nf5L2Wdv/nfZzSMuaFJInbLMPYQKBgQDhVwi9djse/Sjltvu1xl1xCaOypCf8kU/q\nFiZvIFMydJ3mPIVtRWuGljUn0k5b79m2zFsTvI+hA4xigKMsMRLhtmguqim+vdfc\nYjBrinOIYaXzqX+DFvP0MWyFbKg/81YbHJpyM+hPb9ElJhB/YNlfthjpiqmLs+fm\nn3vY5WsCMQKBgQCdy+d1Tjcfg2gx1H35rQ9Rv4gnq5LnE8y6NlQk9K+qIcjNxdpV\nAsaT40AEQipv62gwL4RsUSjr2FOflvxfGdIJ/ATDucDHLnenK+Zti+SXjLFvAba+\nv9d6wP7LyiY2B9OiQBr80RqjKlrUy9i5Vn9m0KCmyQeHMu4v+8xmiPyT4QKBgQCw\nbeR58sf3S19p/Aq4F8exaUqx47UrGtrm/NC60SRSrNu0GE6fb2rwxUp5E0Am23Qq\nm3Xzzf7molCYDv+y6flOn/KSFsj4fssz0ez3Rj+O2GWGkX80tBPtbYT6MkjJSUxx\njcOfBuUszO+Dlnn0QW/wcDKxJ8/3gbRf7R6ag4V1AQKBgE/bN2n1O2+yMVR4z8aY\nmjOymuyF7U2HKPt/knZAH3sZDTY9D3/gSrwv9gdaicxFnyPbYqDsAm3oSwKlWhjq\nHzZl/Fw33O6TIhBRLIE4IIrHwKTXLABWa/v82SV3BVCZmz/LyxPFuqKT8vAihNMt\nfUuCQ7Y3imHPyMEfkwf0AJwH\n-----END PRIVATE KEY-----\n",
+  "client_email": "spreadsheet@red-planet-415014.iam.gserviceaccount.com",
+  "client_id": "115689702758820958794",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/spreadsheet%40red-planet-415014.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

@@ -1,0 +1,35 @@
+version: '3.9'
+services:
+  postgres:
+    image: postgres:15
+    container_name: ggform-db
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: googleform
+      POSTGRES_PASSWORD: googleform
+    ports:
+      - "5433:5432"
+    networks:
+      googleform:
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+  
+  backend:
+    container_name: ggform-server
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    expose:
+      - 8001
+    command: python main.py
+    ports:
+      - 8001:8001
+    networks:
+      googleform:
+    volumes:
+      - .:/app
+networks:
+  googleform:
+volumes:
+  pgdata:

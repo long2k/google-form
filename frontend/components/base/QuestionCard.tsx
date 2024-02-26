@@ -1,6 +1,9 @@
 import { FormData } from "@/common/data/const";
 import { FormDataInterface } from "@/components/HomePage";
-import { useEffect } from "react";
+import { useSession } from "next-auth/react";
+import { useEffect, useState } from "react";
+import { saveUser } from "@/common/utils";
+import Image from "next/image";
 
 const QuestionCard = ({
   data,
@@ -9,6 +12,10 @@ const QuestionCard = ({
   data: FormDataInterface[];
   setData: React.Dispatch<React.SetStateAction<FormDataInterface[]>>;
 }) => {
+  const { data: session } = useSession();
+  const user = session?.user;
+  const [loading, setLoading] = useState<boolean>(false);
+
   const load = () => {
     if (!data.length) {
       let dataClone = [...data];
@@ -32,13 +39,33 @@ const QuestionCard = ({
     }));
     setData(dataClone);
   };
+  const handleSubmit = async () => {
+    try {
+      const values = data.map((item) => item.answer);
+      const response = await fetch("/api/submit", {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      });
+      if (response.status === 200) {
+        if (user && Object.keys(user).length > 0) {
+          await saveUser(user);
+        }
+        window.location.reload();
+      }
+    } catch (error) {
+      // do nothing
+    } finally  {
+      setLoading(false)
+    }
+  };
 
   useEffect(() => {
-    load()
+    load();
   }, []);
-  useEffect(() => {
-    console.log("data:", data);
-  }, [data]);
 
   return (
     <>
@@ -57,7 +84,11 @@ const QuestionCard = ({
                     type="radio"
                     id={content}
                     name={`question-${idx}`}
-                    checked={data[idx]?.answer && data[idx]?.answer === content ? true : false}
+                    checked={
+                      data[idx]?.answer && data[idx]?.answer === content
+                        ? true
+                        : false
+                    }
                   />
                   <p>{content}</p>
                 </div>
@@ -67,12 +98,15 @@ const QuestionCard = ({
         );
       })}
       <div className="w-full flex justify-between items-center">
-        <button className="bg-violet-800 text-[14px] font-semibold rounded-[5px] px-[24px] py-[10px] text-white ">
+        <button
+          onClick={handleSubmit}
+          className="bg-violet-800 flex text-[14px] font-semibold rounded-[5px] px-[24px] py-[10px] text-white "
+        >
           Send
         </button>
         <div
           onClick={handleDelete}
-          className="text-sm text-[#673ab7] font-semibold"
+          className="text-sm text-[#673ab7] font-semibold pointer-cursor"
         >
           Xóa hết câu trả lời
         </div>
